@@ -1,0 +1,39 @@
+domains:
+    build: ./domains
+    volumes:
+        - /etc/nginx/conf.d/
+
+data:
+    build: ./data
+    volumes:
+        - /vagrant/app/:/srv/http/
+
+postgresql:
+    build: ./postgresql
+    expose:
+        - "5432"
+    ports:
+        - "5432:5432"
+
+phpfpm:
+    build: ./phpfpm
+    volumes_from:
+        - data
+    expose:
+        - "9000"
+    ports:
+        - "9000:9000"
+    links:
+        - postgresql
+
+nginx:
+    build: ./nginx
+    volumes_from:
+        - data
+        - domains
+    expose:
+        - "80"
+    ports:
+        - "80:80"
+    links:
+        - phpfpm
