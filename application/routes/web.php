@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function ()    {
+    // Uses Api Middleware
 });
+
+Route::resource('payment', 'PaymentController', ['only' => [
+    'index'
+]]);
+
+Route::resource('physician', 'PhysicianController', ['only' => [
+    'index'
+]]);

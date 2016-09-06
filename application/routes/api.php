@@ -13,6 +13,16 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
+Route::group(['middleware' => 'api'], function () {
+    Route::get('/', function ()    {
+        // Uses Api Middleware
+    });
+
+    Route::resource('payment', 'PaymentController', ['only' => [
+        'index', 'show'
+    ]]);
+
+    Route::resource('physician', 'PhysicianController', ['only' => [
+        'index', 'show'
+    ]]);
+});
