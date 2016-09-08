@@ -14,6 +14,12 @@ postgresql:
         - "5432"
     ports:
         - "5432:5432"
+phpcli:
+    build: ./phpcli
+    volumes_from:
+        - data
+    links:
+        - postgresql
 
 phpfpm:
     build: ./phpfpm

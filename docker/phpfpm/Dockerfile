@@ -1,4 +1,4 @@
-FROM php:7.0-fpm
+FROM php:fpm
 
 MAINTAINER Taylor Silenzio <tsilenzio@gmail.com>
 
@@ -13,4 +13,4 @@ RUN rm -rf /usr/local/etc/php-fpm.d/www.conf.default \
     && mv /tmp/php.ini /usr/local/etc/php/php.ini
 
 # Add persistant volume
-VOLUME ["/srv/http"]
+VOLUME ["/srv/http", "/vagrant"]

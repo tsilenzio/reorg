@@ -24,8 +24,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-         $schedule->command('inspire')
-             ->everyFiveMinutes()
+         $schedule->command('payments:import')
+             ->everyTenMinutes()
              ->withoutOverlapping();
     }
 

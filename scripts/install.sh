@@ -14,4 +14,4 @@ wget -q -O - https://github.com/docker/compose/releases/download/1.8.0/docker-co
 sudo chmod +x /usr/bin/docker-compose
 
 # Create SQLite Database
-touch /vagrnt/application/database/database.sqlite
+touch /vagrant/application/database/database.sqlite

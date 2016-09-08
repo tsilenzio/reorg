@@ -20,7 +20,7 @@
                         <div class="navbar-brand">Reorg Research Case Study</div>
                     </div>
                     <div class="navbar-form navbar-right">
-                        <a id="xlsx" href="#" class="btn btn-primary">XLSX Download</a>
+                        <a id="xls" href="#" class="btn btn-primary">XLS Download</a>
                     </div>
                     <form class="navbar-form navbar-right">
                         <div class="form-group">

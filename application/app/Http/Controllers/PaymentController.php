@@ -97,6 +97,6 @@ class PaymentController extends Controller
                 $sheet->fromArray($data->toArray());
             });
 
-        })->download('xlsx');
+        })->download('xls');
     }
 }

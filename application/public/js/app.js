@@ -212,7 +212,7 @@ $(document).ready(function() {
 	})()
 
 	var DownloadButton = (function() {
-		$('#xlsx').on('click', function() {
+		$('#xls').on('click', function() {
 			$('<form></form>')
 				.attr('method', 'POST')
 				.attr('action', '/download')
