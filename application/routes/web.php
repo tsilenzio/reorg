@@ -11,14 +11,5 @@
 |
 */
 
-Route::get('/', function ()    {
-    // Uses Api Middleware
-});
-
-Route::resource('payment', 'PaymentController', ['only' => [
-    'index'
-]]);
-
-Route::resource('physician', 'PhysicianController', ['only' => [
-    'index'
-]]);
+Route::get('/', '\App\Http\Controllers\PaymentController@index');
+Route::post('/download', '\App\Http\Controllers\PaymentController@download');

@@ -31,6 +31,6 @@ Vagrant.configure(2) do |config|
   # View the documentation for the provider you are using for more
   # information on available options.
 
-  config.vm.provision "shell", path: "bin/install.sh", privileged: false
-  config.vm.provision "shell", path: "bin/start.sh", run: "always", privileged: false
+  config.vm.provision "shell", path: "scripts/install.sh", privileged: false
+  config.vm.provision "shell", path: "scripts/start.sh", run: "always", privileged: false
 end

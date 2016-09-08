@@ -6,7 +6,7 @@ domains:
 data:
     build: ./data
     volumes:
-        - /vagrant/app/:/srv/http/
+        - /vagrant/application/:/srv/http/
 
 postgresql:
     build: ./postgresql

@@ -14,15 +14,5 @@ use Illuminate\Http\Request;
 */
 
 Route::group(['middleware' => 'api'], function () {
-    Route::get('/', function ()    {
-        // Uses Api Middleware
-    });
-
-    Route::resource('payment', 'PaymentController', ['only' => [
-        'index', 'show'
-    ]]);
-
-    Route::resource('physician', 'PhysicianController', ['only' => [
-        'index', 'show'
-    ]]);
+    Route::any('/search', '\App\Http\Controllers\PaymentController@search');
 });
